@@ -13,8 +13,7 @@ class Message(BaseModel):
 
 @app.post("/chat")
 async def chat(message: Message):
-    print("User prompt:", message.prompt)  # Vypíše dotaz do logu na Renderu
-
+    print("User prompt:", message.prompt)  # Přidáme log
     response = client.chat.completions.create(
         model="gpt-3.5-turbo",
         messages=[

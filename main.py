@@ -5,6 +5,7 @@ import os
 
 app = FastAPI()
 
+# OpenAI API klíč z prostředí
 client = openai.OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
 
 class Message(BaseModel):
